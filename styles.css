@@ -1,0 +1,376 @@
+body {
+    background-color: #f0f8f0; /* Very light green background */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+/*first section*/
+.first-section {
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+.dark-green {
+    background-color: darkgreen;
+    color: white;
+    padding: 15px 25px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    display: inline-block; /* Display as inline block */
+}
+
+.diff-green {
+    color: #154734;
+    cursor: pointer;
+    display: inline-block; /* Display as inline block */
+}
+.connecting-dots {
+    position: absolute;
+    top: 68.30%;
+    left: 929px; /* Adjust positioning */
+    transform: translateY(-50%);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color:#154734;
+    border-radius: 50%;
+    margin: 0 3px;
+    opacity: 0; /* Start with dots invisible */
+    position: absolute;
+    animation: connectDots 1s ease-out forwards;
+}
+
+@keyframes connectDots {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    75% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.top-menu button {
+    border-radius: 30px; /* Adjust based on your preference */
+}
+.top-menu button:hover {
+    background-color: #006400; /* Darker green color on hover */
+    color: white; /* Text color on hover */
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+}
+
+.particles-hrm {
+    font-size: 3.5em; /* Increase font size for a more impactful look */
+    font-weight: 700; /* Use a bold font weight for prominence */
+    color: #154734; /* Dark green color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle text shadow for depth */
+    font-family: 'Georgia', 'Times New Roman', serif; /* Choose a serif font for a classy feel */
+    margin-top: 80px; /* Adjust margin-top based on your preference */
+}
+
+/* You can also add a gold gradient background for an extra touch of elegance */
+.particles-hrm::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffd700, #fbc02d); /* Gold gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    z-index: -1;
+}
+
+
+/* Second Section */
+.second-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* Position the symbols in the corners */
+.bench-sales .card-symbol,
+.recruitment .card-symbol,
+.meet-ai .card-symbol,
+.profiles .card-symbol {
+    top: 10px;
+    left: 10px;
+}
+
+/* Position additional set of symbols in the corners */
+.bench-sales .card-symbol::after,
+.recruitment .card-symbol::after,
+.meet-ai .card-symbol::after,
+.profiles .card-symbol::after {
+    content: "";
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+/* Position the symbols in the corners */
+.bench-sales .card-sym,
+.recruitment .card-sym,
+.meet-ai .card-sym,
+.profiles .card-sym {
+    top: 10px;
+    left: 10px;
+}
+
+/* Position additional set of symbols in the corners */
+.bench-sales .card-sym::after,
+.recruitment .card-sym::after,
+.meet-ai .card-sym::after,
+.profiles .card-sym::after {
+    content: "";
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    border-right: 2px solid; /* Add a border for a cursor effect */
+    animation: typing 3s steps(30, end) forwards; /* Apply the animation */
+    border-right: 2px transparent; /* Set border to transparent to hide the cursor */
+    font-family: 'serif'; /* Add serif font style */
+  }
+
+  /* Define the typing animation */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.service-card {
+    flex: 1;
+    background-color: #ffffff; /* White background to simulate poker card */
+    color: #000000; /* Black text color */
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+    border: 2px solid #000000; /* Black border for the card */
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-symbol {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.card-sym {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.service-card:hover {
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+}
+@keyframes moveSymbols {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+    
+}
+@keyframes moveSym {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(50%, 50%);
+    }
+    100% {
+        transform: translate(50%, 50%);
+    }
+}
+/* Apply the animation to symbols */
+.service-card:hover .card-symbol,
+.service-card:hover .card-symbol::after {
+    animation: moveSymbols 2s; /* Removed 'infinite' to stop at the translated position */
+}
+
+/* Apply the animation to symbols */
+.service-card:hover .card-sym,
+.service-card:hover .card-sym::after {
+    animation: moveSym 2s; /* Removed 'infinite' to stop at the translated position */
+}
+/* Apply the animation to symbols */
+.service-card .card-symbol,
+.service-card .card-symbol::after,
+.service-card .card-sym,
+.service-card .card-sym::after {
+    transition: transform 0.3s ease; /* Add a transition for smooth movement */
+}
+
+/* Apply the initial transformation to symbols */
+.service-card .card-symbol,
+.service-card .card-sym {
+    transform: translate(0, 0);
+}
+
+/* Apply the hover transformation to symbols */
+.service-card:hover .card-symbol,
+.service-card:hover .card-symbol::after {
+    transform: translate(-50%, -50%);
+}
+
+/* Apply the hover transformation to symbols */
+.service-card:hover .card-sym,
+.service-card:hover .card-sym::after {
+    transform: translate(50%, 50%);
+}
+
+
+
+/* Third Section */
+.third-section {
+    text-align: center;
+    padding: 40px 0;
+    position: relative;
+}
+
+.character-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.character {
+    width: 100px; /* Adjust the width based on your preference */
+    height: 100px; /* Adjust the height based on your preference */
+    background-size: cover;
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Example positioning for each character */
+.character.poker-king {
+    bottom: 60px;
+    left: 0px;
+}
+
+.character.poker-queen {
+    bottom: 60px;
+    left: 300px;
+}
+
+.character.poker-minister {
+    bottom: 60px;
+    left: 660px;
+}
+
+
+.character.girl-with-hat {
+    bottom: 60px;
+    left: 1035px;
+}
+
+.character.boy-with-cap {
+    bottom: 60px;
+    left:1340px;
+}
+
+.poker-king {
+    background-image: url('/Users/slaya/Desktop/girl.png');
+}
+
+.poker-queen {
+    background-image: url('/Users/slaya/Desktop/prince.png');
+}
+
+.poker-minister {
+    background-image: url('/Users/slaya/Desktop/bavarian.png');
+}
+
+.boy-with-cap {
+    background-image: url('/Users/slaya/Desktop/princess.png');
+}
+
+.girl-with-hat {
+    background-image: url('/Users/slaya/Desktop/superhero.png');
+}
+
+
+
+
+
+
+/* Fourth Section */
+.fourth-section {
+    text-align: center;
+    padding: 40px 0;
+}
+.fourhead {
+    font-family: serif;
+    font-size: 50px;
+    font-style: bold;
+    color: #154734 ;
+    margin-bottom: 20px
+}
+/* You can also add padding-bottom to the fourth-section if needed */
+.fourth-section {
+    text-align: center;
+    padding: 40px 0; /* Adjust padding as needed */
+  }
+.oval-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.white {
+    background-color: white;
+    color: black;
+    padding: 25px 40px;
+    border: 2px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px; /* Adjust the font size based on your preference */
+}
+
